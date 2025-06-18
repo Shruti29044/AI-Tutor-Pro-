@@ -56,6 +56,39 @@ huggingface_api_key = "hf_REPLACE_WITH_YOUR_HUGGING_FACE_API_KEY"
 
 ---
 
+## Challenges
+
+### 1️⃣ Model Quality vs Cost
+- Open-source models like `Mistral-7B` give better answers than small models, but running larger models locally requires powerful GPUs.
+- Hugging Face Inference API solves this but may incur costs at scale beyond free-tier limits.
+- Balancing free access with acceptable quality remains challenging.
+
+### 2️⃣ Latency & API Limitations
+- Inference API calls to large models may have noticeable response times.
+- Response speed depends on Hugging Face server load.
+- For real-time tutoring, latency may affect user experience.
+
+### 3️⃣ Personalization Complexity
+- Truly adaptive learning requires dynamic student profiling, learning style detection, and long-term tracking.
+- Integrating advanced personalization and curriculum adaptation would significantly increase project complexity.
+
+### 4️⃣ Reinforcement Learning Integration
+- Adaptive difficulty using reinforcement learning needs carefully designed reward functions.
+- Simulating long-term student behavior to train RL agents is a non-trivial problem.
+
+### 5️⃣ Multimodal Inputs (CV, Audio)
+- Adding engagement detection via webcam or analyzing speech requires separate CV and audio models.
+- Running CV models in Colab is limited due to hardware and webcam access restrictions.
+
+### 6️⃣ Privacy and Data Security
+- Storing student learning data (if done in future versions) requires compliance with data privacy laws (GDPR, COPPA, etc.)
+- Additional work is required for secure backend infrastructure.
+
+### 7️⃣ Scaling to Production
+- Moving beyond Colab into production (web app, mobile app) requires full backend services, user authentication, load balancing, and error handling.
+
+---
+
 ## Future Improvements (Optional Extensions)
 - Add user authentication
 - Track student progress and profile data
@@ -75,5 +108,3 @@ huggingface_api_key = "hf_REPLACE_WITH_YOUR_HUGGING_FACE_API_KEY"
 This project is provided for educational and prototyping purposes only.
 
 ---
-
-# End of README
